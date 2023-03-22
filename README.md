@@ -1,1 +1,1 @@
-# Email-generator
+# Email-generator with Node JS

@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const sendMail = require('./gmail');
 
-//TO SEND MAIL FROM HERE, REFER TO INDEX2.JS
+//WORKING CODE TO SEND MAIL , PLEASE REFER TO index2.js FILE
 const main = async () => {
   const fileAttachments = [
     {

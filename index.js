@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const sendMail = require('./gmail');
 const MClient = require('mailosaur');
-//TO SEND MAIL FROM HERE, REFER TO INDEX2.JS
+
 const main = async () => {
   const apiKey = ''
     const serverId = ''

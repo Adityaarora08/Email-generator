@@ -1,9 +1,19 @@
 const fs = require('fs');
 const path = require('path');
 const sendMail = require('./gmail');
-
-//WORKING CODE TO SEND MAIL , PLEASE REFER TO index2.js FILE
+const MClient = require('mailosaur');
+//TO SEND MAIL FROM HERE, REFER TO INDEX2.JS
 const main = async () => {
+  const apiKey = ''
+    const serverId = ''
+    const serverDomain = ''
+    const mailosaur = new MClient(apiKey)
+  
+    const criteria = {
+      sentTo: 'anything@' + serverDomain
+    }
+  
+    const email = await mailosaur.messages.get(serverId, criteria)
   const fileAttachments = [
     {
       filename: 'attachment1.txt',
@@ -19,9 +29,9 @@ const main = async () => {
     },
   ];
   const options = {
-    to: 'adityaarora3540@gmail.com',
-    cc: 'tomarprince443@gmail.com',
-    replyTo: 'tomarprince443@gmail.com',
+    to: `${email.from[0].email}`,
+    cc: 'adityaarora170802@gmail.com',
+    replyTo: 'adityaarora170802@gmail.com',
     subject: 'Vacation Mode is ONNNN',
     text: 'This email is sent from the command line',
     html: `<p>🙋🏻‍♀️  &mdash; This is a <b>test email</b> from Aditya Arora</a>.</p>`,
